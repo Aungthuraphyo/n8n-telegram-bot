@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n-telegram-bot
+    name: n8n-test
     env: docker
     plan: starter
     docker:
@@ -11,7 +11,8 @@ services:
       - key: N8N_BASIC_AUTH_USER
         value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: my_secure_password_123
+        value: testpassword123
+      - key: N8N_ENCRYPTION_KEY
+        value: test-32-char-encryption-key-12345
       - key: N8N_PROTOCOL
         value: https
-    healthCheckPath: /healthz
