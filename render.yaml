@@ -2,7 +2,7 @@ services:
   - type: web
     name: n8n-telegram-bot
     env: docker
-    plan: free
+    plan: starter
     docker:
       dockerfile: ./Dockerfile
     envVars:
@@ -11,9 +11,7 @@ services:
       - key: N8N_BASIC_AUTH_USER
         value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: your_strong_password_here
+        value: my_secure_password_123
       - key: N8N_PROTOCOL
         value: https
-      - key: WEBHOOK_URL
-        value: https://your-n8n-app.onrender.com
     healthCheckPath: /healthz
