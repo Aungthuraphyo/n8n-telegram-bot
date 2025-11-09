@@ -8,17 +8,7 @@ ENV N8N_ENCRYPTION_KEY=my-32-character-encryption-key-1234
 ENV N8N_HOST=0.0.0.0
 ENV N8N_PORT=5678
 ENV N8N_PROTOCOL=https
-ENV WEBHOOK_URL=https://your-app-name.onrender.com
-ENV N8N_DIAGNOSTICS_ENABLED=false
-
-# Create directory for n8n data
-RUN mkdir -p /home/node/.n8n && chown -R node:node /home/node/.n8n
-
-# Copy exported data (optional)
-COPY n8n_export.json /home/node/.n8n/backup/
-COPY n8n_variables.json /home/node/.n8n/backup/
-
-USER node
+ENV WEBHOOK_URL=https://n8n-production.onrender.com
 
 EXPOSE 5678
 
