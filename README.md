@@ -1,2 +1,3 @@
-# n8n-telegram-bot
-n8n with Telegram bot deployment
+# n8n Telegram Bot
+
+This project deploys n8n with Telegram bot integration on Render.
