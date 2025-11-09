@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: n8n-test
+    name: n8n-production
     env: docker
     plan: starter
     docker:
@@ -11,8 +11,11 @@ services:
       - key: N8N_BASIC_AUTH_USER
         value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
-        value: testpassword123
+        value: my_secure_password_123
       - key: N8N_ENCRYPTION_KEY
-        value: test-32-char-encryption-key-12345
+        value: my-32-character-encryption-key-1234
       - key: N8N_PROTOCOL
         value: https
+      - key: WEBHOOK_URL
+        value: https://n8n-production.onrender.com
+    healthCheckPath: /healthz
